@@ -34,7 +34,7 @@ import java.util.Scanner;
 public class Task4_4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите целое число");
+        System.out.print("Введите целое число ");
         int number = scanner.nextInt();
 
 
@@ -54,7 +54,7 @@ public class Task4_4 {
         int sumI = 0;
         for (int i = 1; i <= number -1; i++) {
             if (number % i == 0) {
-            sumI = sumI + i;
+            sumI += i;
             }
         }
         return sumI;
