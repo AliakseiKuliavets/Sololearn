@@ -8,9 +8,7 @@ public class Main {
 
         PrivatArrays privatArrays = new PrivatArrays();
 
-        int sum = privatArrays.getArraysIntSum();
-
-        System.out.println("Sum arrays: " );
+        System.out.println("Sum arrays: " + privatArrays.getArraysIntSum());
 
     }
 
