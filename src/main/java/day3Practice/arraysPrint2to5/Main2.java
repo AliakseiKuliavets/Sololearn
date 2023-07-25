@@ -9,13 +9,11 @@
 
 package day3Practice.arraysPrint2to5;
 
-import day3Practice.arraysPrint2to5.PrivatArrays;
 
-
-public class Main {
+public class Main2 {
     public static void main(String[] args) {
 
-        PrivatArrays privatArrays = new PrivatArrays();
+        PrivatArrays2 privatArrays = new PrivatArrays2();
 
         System.out.println("Sum arrays: " + privatArrays.getArraysIntSum());
 

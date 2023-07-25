@@ -1,6 +1,6 @@
 package day3Practice.arraysPrint2to5;
 
-public class PrivatArrays {
+public class PrivatArrays2 {
     private int[] arraysInt = {1, 5, 7, 3, 4};
 
     public int[] getArraysInt() {
