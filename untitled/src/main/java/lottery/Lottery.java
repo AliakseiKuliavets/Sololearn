@@ -12,6 +12,7 @@ public class Lottery {
     public void run() {
         makeCustomerNumbers();
         makeWinningNumbers();
+        checkWinnings();
         printWinnAndCustomNumbers();
 
     }
@@ -39,5 +40,21 @@ public class Lottery {
     private void printWinnAndCustomNumbers() {
         System.out.println("Winning numbers: " + Arrays.toString(winningNumbers));
         System.out.println("Customer numbers: " + Arrays.toString(customerNumbers));
+    }
+
+    private void checkWinnings() {
+        int count = 0;
+        for (int customerNumber : customerNumbers) {
+            for (int winningNumber : winningNumbers) {
+                if (customerNumbers == winningNumbers) {
+                    count++;
+                }
+            }
+        }
+        if (count >= 3) {
+            System.out.println("Your win");
+        } else {
+            System.out.println("Try again");
+        }
     }
 }
