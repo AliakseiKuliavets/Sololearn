@@ -38,6 +38,7 @@ public class Lottery {
 
             if (isThisNumberPresentInArray(randomNumber , winningNumbers )) {
                 winningNumbers[i] = randomNumber;
+                i++;
             }
         }
     }
