@@ -20,11 +20,13 @@ public class Lottery {
         int[] customerNumbers = new int[5];
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your \"Lucky numbers\"");
-        for (int i = 0; i < customerNumbers.length; i++) {
+        int i = 0;
+        while (i < customerNumbers.length) {
             System.out.print((i + 1) + " number: ");
-            customerNumbers[i] = scanner.nextInt();
-            if (customerNumbers[i] < 1 || customerNumbers[i] > 50) {
-                System.out.println("Wrong numbers");
+            int numberLuck = scanner.nextInt();
+            if (!(isThisNumberPresentInArray(numberLuck , customerNumbers ))) {
+                customerNumbers[i] = numberLuck;
+                i++;
             }
         }
         this.customerNumbers = customerNumbers;
@@ -33,10 +35,11 @@ public class Lottery {
     private void makeWinningNumbers() {
         Random random = new Random();
         int i = 0;
+        int randomNumber;
         while (i < winningNumbers.length) {
-        int randomNumber = random.nextInt(1,51);
+            randomNumber = random.nextInt(1,51);
 
-            if (isThisNumberPresentInArray(randomNumber , winningNumbers )) {
+            if (!(isThisNumberPresentInArray(randomNumber , winningNumbers ))) {
                 winningNumbers[i] = randomNumber;
                 i++;
             }
