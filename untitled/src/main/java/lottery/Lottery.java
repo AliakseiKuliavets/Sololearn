@@ -32,8 +32,13 @@ public class Lottery {
 
     private void makeWinningNumbers() {
         Random random = new Random();
-        for (int i = 0; i < winningNumbers.length; i++) {
-            winningNumbers[i] = random.nextInt(1,51);
+        int i = 0;
+        while (i < winningNumbers.length) {
+        int randomNumber = random.nextInt(1,51);
+
+            if (isThisNumberPresentInArray(randomNumber , winningNumbers )) {
+                winningNumbers[i] = randomNumber;
+            }
         }
     }
 
@@ -57,4 +62,14 @@ public class Lottery {
         System.out.println("Winning numbers: " + Arrays.toString(winningNumbers));
         System.out.println("Customer numbers: " + Arrays.toString(customerNumbers));
     }
+
+    private boolean isThisNumberPresentInArray(int targetNumber, int[] array) {
+        for (int currentNumber: array) {
+            if (currentNumber == targetNumber) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
