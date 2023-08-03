@@ -27,6 +27,11 @@ public class Calculator {
     private double[] getInputNumbersArray() {
         System.out.print("Enter number of arguments 2 and more: ");
         int amount = Integer.parseInt(getNextLine());
+
+        if (amount > 2) {
+            return getInputNumbersArray();
+        }
+
         double[] inputNumbersArray = new double[amount];
         for (int i = 0; i < inputNumbersArray.length; i++) {
             System.out.print("Enter " + (i + 1) + " value: ");
