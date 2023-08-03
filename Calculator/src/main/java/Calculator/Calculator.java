@@ -13,9 +13,9 @@ public class Calculator {
     public void run() {
         char mathChar;
         Double result;
-        System.out.print("Enter character: ");
-        mathChar = getNextLine().charAt(0);
         while (true) {
+            System.out.print("Enter character: ");
+            mathChar = getNextLine().charAt(0);
             if (mathChar == 'E') {
                 closeProgram();
             }
@@ -28,7 +28,7 @@ public class Calculator {
         System.out.print("Enter number of arguments 2 and more: ");
         int amount = Integer.parseInt(getNextLine());
 
-        if (amount > 2) {
+        if (amount < 2) {
             return getInputNumbersArray();
         }
 
