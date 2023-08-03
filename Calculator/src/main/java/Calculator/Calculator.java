@@ -13,14 +13,13 @@ public class Calculator {
     public void run() {
         char mathChar;
         Double result;
-        while (true) {
-            System.out.print("Enter character: ");
-            mathChar = getNextLine().charAt(0);
-            if (mathChar == 'E') {
-                closeProgram();
-            }
+
+        System.out.print("Enter character: ");
+        mathChar = getNextLine().charAt(0);
+        if (mathChar != 'E') {
             result = userInputRouter(mathChar, getInputNumbersArray());
             System.out.println(result);
+            run();
         }
     }
 
