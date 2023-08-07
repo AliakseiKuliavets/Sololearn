@@ -69,7 +69,7 @@ public class Lottery {
             }
         }
         if (count >= 3) {
-            System.out.println("You lost");
+            System.out.println("You win");
         } else {
             System.out.println("Try again");
         }
